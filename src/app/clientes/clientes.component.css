@@ -1,0 +1,38 @@
+.example-container {
+  margin: 20px;
+}
+
+.button-row {
+  margin-bottom: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mat-margin {
+  margin-right: 10px;
+}
+
+
+button.mat-raised-button {
+  background-color: #007bff; 
+  color: white; 
+}
+
+button.mat-raised-button:hover {
+  background-color: #0056b3; 
+}
+
+.edit-img {
+  width: 20px; 
+  margin-left: 10px; 
+}
+
+.btn .icon {
+  width: 20px;
+  height: 20px; 
+  margin-right: 8px; 
+}

@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>New Client</h2>
+<mat-dialog-content>
+  <form [formGroup]="clientForm">
+    <div class="form-group">
+      <label for="client-name" class="col-form-label">Name:</label>
+      <input type="text" class="form-control" id="client-name" formControlName="name" required>
+    </div>
+    <div class="form-group">
+      <label for="client-phone" class="col-form-label">Phone:</label>
+      <input type="number" class="form-control" id="client-phone" formControlName="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="client-email" class="col-form-label">Email:</label>
+      <input type="email" class="form-control" id="client-email" formControlName="email" required>
+      <div *ngIf="clientForm && clientForm.get('email')?.invalid && (clientForm.get('email')?.dirty || clientForm.get('email')?.touched)">
+        <small class="text-danger" *ngIf="clientForm.get('email')?.errors?.['email']">El formato del correo es incorrecto.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="client-start-date" class="col-form-label">Start Date:</label>
+      <input type="date" class="form-control" id="client-start-date" formControlName="startDate" required>
+    </div>
+    <div class="form-group">
+      <label for="client-end-date" class="col-form-label">End Date:</label>
+      <input type="date" class="form-control" id="client-end-date" formControlName="endDate" required>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button class="btn btn-info" [mat-dialog-close]="true">Close</button>
+  <button mat-button class="btn btn-danger" (click)="saveClient()" [disabled]="clientForm.invalid">Save Client</button>
+</mat-dialog-actions>

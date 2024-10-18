@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  height: 100vh;
+}
+
+.app-container {
+  height: 100vh;
+}
+
+.menu-container {
+  background-color: #f8f9fa;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  padding: 20px;
+}
+
+.content-wrapper {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 100%;
+}
